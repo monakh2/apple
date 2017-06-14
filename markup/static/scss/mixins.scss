@@ -1,32 +1,55 @@
 // Mixins.
-
 @mixin nl {
-    margin: 0;
-    padding: 0;
-    text-indent: 0;
-    list-style: none;
-    list-style-position: outside;
-}
+  margin:              0;
+  padding:             0;
+  text-indent:         0;
+  list-style:          none;
+  list-style-position: outside;
+  }
 
 @mixin cf {
-    &:before,
-    &:after {
-        display: table;
-        content: "";
-    }
+  &:before,
+  &:after {
+	display: table;
+	content: "";
+	}
 
-    &:after {
-        clear: both;
-    }
+  &:after {
+	clear: both;
+	}
 
-    .lt-ie8 & {
-        zoom: 1;
-    }
-}
+  .lt-ie8 & {
+	zoom: 1;
+	}
+  }
 
 @mixin blocks-justify {
-    text-align: justify;
-    text-justify: newspaper;
-}
+  text-align:   justify;
+  text-justify: newspaper;
+  }
 
 // You can add your own mixins here:
+//Intermediate function for obtaining the value of map
+@function config($map, $key) {
+  @if map_has_key($map, $key) {
+	@return map-get($map, $key);
+	} @else {
+	@warn "Unfortunately, no value could be retrieved from `#{$key}`. "
+         + "Please make sure it is defined in `#{$map}` map.";
+	}
+  }
+
+//Function that returns a value of map breakpoints
+@function breakpoints($request) {
+  @return config($_breakpoints, $request);
+  }
+//Function that returns a value of map color
+@function color($request) {
+  @return config($_color, $request);
+  }
+//Pseudo element
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+  }

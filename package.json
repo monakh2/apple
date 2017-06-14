@@ -1,18 +1,22 @@
 {
-  "name": "awesome_project",
+  "name": "apple",
   "version": "1.0.0",
-  "description": "Your awesome project description",
+  "description": "Bootstrap 3.3.7 project",
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
     "babel-preset-es2015": "^6.24.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "rucksack-css": "^0.9.1",
+    "sass-mediaqueries": "^1.6.1",
+    "scut": "^1.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Konstantin Monastyrskiy",
   "license": "ISC"
 }

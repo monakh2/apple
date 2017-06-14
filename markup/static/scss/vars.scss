@@ -1,2 +1,20 @@
 // File for scss-vars.
 // For example: main colors, paddings and so on.
+$_breakpoints: (
+					   "phone": 400px,
+					   "phone-wide": 480px,
+					   "phablet": 560px,
+					   "tablet-small": 640px,
+					   "tablet": 768px,
+					   "tablet-wide": 1024px,
+					   "desktop": 1248px,
+					   "desktop-wide": 1440px
+			   );
+$_color: (
+				 "main": #148EB5,
+				 "main-darck": #1D6998,
+				 "bg": #F0F2F4,
+				 "text": #FFFFFF,
+				 "text-darck": #444444,
+				 "text-hover": #18AEDE,
+		 );

@@ -1,1 +1,37 @@
+.page-header {
+  background-color: color(bg);
+  margin:           0;
+  padding:          0;
+  }
 
+.row {
+  display: flex;
+  > div {
+	align-self: center;
+	}
+  }
+
+.header-phones {
+  color:  color(main);
+  margin: 0;
+  li:first-child {
+	position: relative;
+	&:before {
+	  @include pseudo();
+	  //@include scut-size(11px 18px);
+	  @include bg($icon-modile);
+	  }
+	}
+  }
+
+.search-block {
+  padding-right: 0;
+  .input-group {
+	width: 100%;
+	}
+  .input-group-btn {
+	.btn {
+	  padding-bottom: 7px;
+	  }
+	}
+  }
