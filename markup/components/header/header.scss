@@ -2,6 +2,35 @@
   background-color: color(bg);
   margin:           0;
   padding:          0;
+  .btn-group {
+	width: 100%;
+	button {
+	  background-color: color(main);
+	  @include scut-size(70px);
+	  text-align: center;
+
+	  span {
+		display: inline-block;
+
+		}
+	  .icon-search{
+
+		@include bg($icon-search);
+		}
+	  .icon-basket{
+
+		@include bg($icon-basket);
+		}
+	  .icon-login {
+
+		@include bg($icon-login);
+		}
+	    &.btn-login {
+		  float: right;
+		  }
+	  }
+
+	}
   }
 
 .row {
@@ -32,6 +61,13 @@
   .input-group-btn {
 	.btn {
 	  padding-bottom: 7px;
+	  }
+	}
+  }
+#header {
+  .btn-group {
+	.btn {
+	  border-radius: 5px;
 	  }
 	}
   }
