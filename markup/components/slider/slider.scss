@@ -1,0 +1,30 @@
+#slider {
+  background-image:    url(%=static=%assets/slider/bg.png);
+  background-position: center;
+  min-height:          600px;
+  .item {
+	@include scut-size(1106px 582px);
+	background-image: url(%=static=%assets/slider/slide-1.png);
+	}
+
+  }
+
+.carousel-control {
+  &.left,
+  &.right {
+	background: none;
+	}
+  .fa-arrow-left,
+  .fa-arrow-right {
+	position: absolute;
+	top:      50%;
+	}
+  $margin: 5%;
+  .fa-arrow-left {
+	left: $margin;
+	}
+  .fa-arrow-right {
+	right: $margin;
+	}
+
+  }
