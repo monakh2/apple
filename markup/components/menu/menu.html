@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<div class="container">
+			<div class="row" data-hover="dropdown" data-animations="fadeInDown flip bounceInDown fadeIn" aria-expanded="true">
+				<ul class="nav navbar-nav" data-hover="dropdown">
+					{{#each menu.links}}
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							<span class="center-block {{this.class}}"></span>
+							<p class="text-center">{{this.title}}</p>
+						</a>
+						<ul class="dropdown-menu dropdownhover-bottom" role="menu">
+							<li class="dropdown-menu-item"><a href="#">Apple iPhone SE</a></li>
+							<li class="dropdown-menu-item"><a href="#">Apple iPhone 6s</a></li>
+							<li class="dropdown-menu-item"><a href="#">Apple iPhone 6s Plus</a></li>
+							<li class="dropdown-menu-item"><a href="#">Apple iPhone 6</a></li>
+							<li class="dropdown-menu-item"><a href="#">Apple iPhone 6 Plus</a></li>
+						</ul>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div><!-- /.navbar-collapse -->
+</nav>

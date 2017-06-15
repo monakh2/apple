@@ -1,0 +1,87 @@
+.navbar {
+  background-color: color(main-darck);
+  border-radius:    0;
+  color:            white;
+  padding:          6px 0;
+
+  .navbar-nav {
+	width: 100%;
+	li.dropdown {
+	  $w: 100%;
+	  width: $w / 6;
+	  a.dropdown-toggle {
+		color:    white;
+		height:   100px;
+		position: relative;
+		&:hover {
+
+		  }
+		p {
+		  bottom:   0;
+		  position: absolute;
+		  width:    calc(100% - 30px);
+
+		  }
+		}
+	  &:hover {
+		p {
+		  color: color(text-hover);
+		  }
+		.menu-icon-iphone {
+		  @include bg($icon-iphone-hover);
+		  }
+		.menu-icon-ipad {
+		  @include bg($icon-ipad-hover);
+		  }
+		.menu-icon-macbook {
+		  @include bg($icon-macboock-hover);
+		  }
+		.menu-icon-watch {
+		  @include bg($icon-watch-hover);
+		  }
+		.menu-icon-desktop {
+		  @include bg($icon-desktop-hover);
+		  }
+		.menu-icon-keyboard {
+		  @include bg($icon-keyboard-hover);
+		  }
+		}
+	  &.dropdown.open {
+		a.dropdown-toggle {
+		  background-color: color(main-darck-hover);
+		  }
+		}
+	  }
+	}
+  }
+
+.menu-icon-iphone {
+  @include bg($icon-iphone);
+  }
+.menu-icon-ipad {
+  @include bg($icon-ipad);
+  }
+.menu-icon-macbook {
+  @include bg($icon-macboock);
+  }
+.menu-icon-watch {
+  @include bg($icon-watch);
+  }
+.menu-icon-desktop {
+  @include bg($icon-desktop);
+  }
+.menu-icon-keyboard {
+  @include bg($icon-keyboard);
+  }
+.dropdown-menu {
+  background-color: color(main-darck);
+  .dropdown-menu-item {
+	a {
+	  color: white;
+	  &:hover {
+		color: color(text-hover);
+		background-color: color(main-darck-hover);
+		}
+	  }
+	}
+  }
