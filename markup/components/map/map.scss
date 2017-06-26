@@ -1,0 +1,57 @@
+#map {
+  color:    color(text);
+  position: relative;
+  }
+
+#gmap {
+  height: 450px;
+  }
+
+.address-wrap {
+  background-color: rgba(color(main), 0.95);
+  bottom:           0;
+  padding-right:    $spacer * 4;
+  position:         absolute;
+  top:              0;
+
+  }
+
+.address {
+  h2 {
+	margin-bottom: $spacer * 2;
+	position:      relative;
+	&::after {
+	  @include pseudo();
+	  @include scut-size(50px 5px);
+	  background-color: white;
+	  bottom:           -20px;
+
+	  }
+	}
+  p,
+  ul {
+	margin-left: $spacer *2;
+	position:    relative;
+	&::before {
+	  @include pseudo();
+	  left: -30px;
+	  }
+	}
+
+  .icon-marck::before {
+	//@include bg($icon-marck);
+	@include bg-svg($marck);
+	}
+  .icon-mail::before {
+	//@include bg($icon-mail);
+	@include bg-svg($mail);
+	}
+  .icon-mobile-white::before {
+	//@include bg($icon-mobile-white);
+	@include bg-svg($mobile);
+	}
+  .icon-clock::before {
+	//@include bg($icon-clock);
+	@include bg-svg($clock);
+	}
+  }

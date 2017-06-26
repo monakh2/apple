@@ -10,6 +10,7 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
+    "handlebars-helpers": "^0.8.2",
     "rucksack-css": "^0.9.1",
     "sass-mediaqueries": "^1.6.1",
     "scut": "^1.4.0"

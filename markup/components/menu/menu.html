@@ -12,11 +12,11 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<div class="container">
 			<div class="row" data-hover="dropdown" data-animations="fadeInDown flip bounceInDown fadeIn" aria-expanded="true">
-				<ul class="nav navbar-nav" data-hover="dropdown">
+				<ul class="main-menu nav navbar-nav" data-hover="dropdown">
 					{{#each menu.links}}
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-							<span class="center-block {{this.class}}"></span>
+							<span class="center-block icon-menu-{{this.icon}}"></span>
 							<p class="text-center">{{this.title}}</p>
 						</a>
 						<ul class="dropdown-menu dropdownhover-bottom" role="menu">

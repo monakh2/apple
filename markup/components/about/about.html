@@ -1,0 +1,13 @@
+<section id="about" class="block-about">
+	{{> sectionHeader/sectionHeader sectionHeader.about}}
+	<div class="container">
+		<p class="slogan text-center">{{about.slogan}}</p>
+		<div class="row">
+			<div class="text-wrap col-md-12">
+				{{#each about.text}}
+				<p>{{this}}</p>
+				{{/each}}
+			</div><!-- /text-wrap-->
+		</div><!-- /row-->
+	</div><!-- /container-->
+</section>

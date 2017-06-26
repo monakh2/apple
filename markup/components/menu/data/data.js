@@ -3,27 +3,27 @@ var data = {
 		links: {
 			linkA: {
 				title: "Apple iPhone",
-				class: "menu-icon-iphone"
+				icon: "iphone"
 			},
 			linkB: {
 				title: "Apple iPad",
-				class: "menu-icon-ipad"
+				icon: "ipad"
 			},
 			linkC: {
 				title: "Apple MacBook",
-				class: "menu-icon-macbook"
+				icon: "macbook"
 			},
 			linkD: {
 				title: "Apple Watch",
-				class: "menu-icon-watch"
+				icon: "watch"
 			},
 			linkE: {
 				title: "Apple iMac",
-				class: "menu-icon-desktop"
+				icon: "desktop"
 			},
 			linkF: {
 				title: "Accessories",
-				class: "menu-icon-keyboard"
+				icon: "keyboard"
 			}
 		}
 	}

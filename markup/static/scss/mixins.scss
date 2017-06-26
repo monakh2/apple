@@ -43,13 +43,22 @@
 @function breakpoints($request) {
   @return config($_breakpoints, $request);
   }
+
 //Function that returns a value of map color
 @function color($request) {
   @return config($_color, $request);
   }
+
 //Pseudo element
-@mixin pseudo($display: block, $pos: absolute, $content: ''){
-  content: $content;
-  display: $display;
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content:  $content;
+  display:  $display;
   position: $pos;
+  }
+
+%bg-image {
+  background-position: center center;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  width:               100%;
   }

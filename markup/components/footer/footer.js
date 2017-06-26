@@ -1,0 +1,1 @@
+$('.page__footer .year').html(new Date().getFullYear());

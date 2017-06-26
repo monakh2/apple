@@ -4,26 +4,41 @@
 	{{> head/head head.defaults}}
 </head>
 <body class="page">
+{{> warning_js/warning_js}}
 %=symbols=%
+
 <section class="page__wrapper">
 	{{> header/header}}
 	<!-- Include your modules here -->
+	{{> test/test}}
 	{{> slider/slider}}
 	{{> menu/menu}}
-	<!--{{> test/test}}-->
+	{{> advantages/advantages}}
+	{{> goods/goods}}
+	{{> tablet/tablet}}
+	{{> about/about}}
+	{{> map/map}}
+	{{> questions/questions}}
 	<div class="page__buffer"></div>
 </section>
 <footer class="page__footer">
 	{{> footer/footer}}
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- google map -->
+<!--TODO: ПРОТЕСТИРОВАТЬ СКОРОСТЬ ЗАГРУЗКИ СТР ПРИ синхронной/асинхронной заргучке Google map API-->
+<!--<script async defer-->
+<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvI5MwMbyDIUYjMVf8qLVY3oJ2vTxhkVc">
+</script>
+<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous">
+</script>
 <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
 <script>svg4everybody();</script>
-<!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+<!-- Main scripts. You can replace it, but I recommend you to leave it here -->
 <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+.block-about {
+  .text-wrap {
+	border-left: 4px solid color(main);
+	p {
+	  margin-bottom: 0;
+	 &:not(:last-child) {
+	   padding-bottom: 10px;
+	   }
+	  }
+	}
+  }

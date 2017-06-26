@@ -2,20 +2,24 @@
   background-color: color(main-darck);
   border-radius:    0;
   color:            white;
+  margin-bottom:    0;
   padding:          6px 0;
 
-  .navbar-nav {
+  .main-menu {
 	width: 100%;
 	li.dropdown {
 	  $w: 100%;
 	  width: $w / 6;
+	  &:not(:last-child){
+		border-right: 1px solid color(main-darck-hover);
+		}
+	  
 	  a.dropdown-toggle {
 		color:    white;
 		height:   100px;
 		position: relative;
-		&:hover {
 
-		  }
+
 		p {
 		  bottom:   0;
 		  position: absolute;
@@ -27,23 +31,28 @@
 		p {
 		  color: color(text-hover);
 		  }
-		.menu-icon-iphone {
-		  @include bg($icon-iphone-hover);
+		.icon-menu-iphone {
+		  //@include bg($iphone-hover);
+		  @include bg-svg($iphoneh);
 		  }
-		.menu-icon-ipad {
-		  @include bg($icon-ipad-hover);
+		.icon-menu-ipad {
+		  //@include bg($ipad-hover);
+		  @include bg-svg($ipadh);
 		  }
-		.menu-icon-macbook {
-		  @include bg($icon-macboock-hover);
+		.icon-menu-macbook {
+		  //@include bg($macboock-hover);
+		  @include bg-svg($macboockh);
 		  }
-		.menu-icon-watch {
-		  @include bg($icon-watch-hover);
+		.icon-menu-watch {
+		  //@include bg($watch-hover);
+		  @include bg-svg($watchh);
 		  }
-		.menu-icon-desktop {
-		  @include bg($icon-desktop-hover);
+		.icon-menu-desktop {
+		  //@include bg($desktop-hover);
+		  @include bg-svg($desktoph);
 		  }
-		.menu-icon-keyboard {
-		  @include bg($icon-keyboard-hover);
+		.icon-menu-keyboard {
+		  @include bg-svg($keyboardh);
 		  }
 		}
 	  &.dropdown.open {
@@ -55,32 +64,45 @@
 	}
   }
 
-.menu-icon-iphone {
-  @include bg($icon-iphone);
+.icon-menu-iphone {
+  //@include bg($iphone);
+  @include bg-svg($iphone);
   }
-.menu-icon-ipad {
-  @include bg($icon-ipad);
+
+.icon-menu-ipad {
+  //@include bg($ipad);
+  @include bg-svg($ipad);
   }
-.menu-icon-macbook {
-  @include bg($icon-macboock);
+
+.icon-menu-macbook {
+  //@include bg($macboock);
+  @include bg-svg($macboock);
   }
-.menu-icon-watch {
-  @include bg($icon-watch);
+
+.icon-menu-watch {
+  //@include bg($watch);
+  @include bg-svg($watch);
   }
-.menu-icon-desktop {
-  @include bg($icon-desktop);
+
+.icon-menu-desktop {
+  //@include bg($desktop);
+  @include bg-svg($desktop);
   }
-.menu-icon-keyboard {
-  @include bg($icon-keyboard);
+
+.icon-menu-keyboard {
+  //@include bg($keyboard);
+  @include bg-svg($keyboard);
   }
+
 .dropdown-menu {
   background-color: color(main-darck);
+  border-radius: 0;
   .dropdown-menu-item {
 	a {
 	  color: white;
 	  &:hover {
-		color: color(text-hover);
 		background-color: color(main-darck-hover);
+		color:            color(text-hover);
 		}
 	  }
 	}

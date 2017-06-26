@@ -1,0 +1,32 @@
+.block-questions {
+  .glyphicon-arrow-right {
+	margin-right: scut-em(5);
+	}
+  .footer-contacts {
+	.icon-marck-blue,
+	.icon-mail-blue,
+	.icon-mobile-blue {
+	  margin-left: $spacer * 2;
+	  margin-bottom: $spacer;
+	  }
+	.icon-marck-blue::before {
+	  @include pseudo();
+	  @include bg-svg($marck-blue);
+	  left: $spacer;
+	  }
+	.icon-mail-blue::before {
+	  @include pseudo();
+	  @include bg-svg($mail-blue);
+	  left: $spacer;
+	  }
+	.icon-mobile-blue::before {
+	  @include pseudo();
+	  @include bg-svg($mobile-blue);
+	  left: $spacer;
+	  }
+
+	}
+  .phone-call {
+	margin-bottom: $spacer;
+	}
+  }

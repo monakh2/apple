@@ -17,7 +17,12 @@ const handlebarsHelpers = {
      */
     exampleHelper: function (str) {
         return str;
-    }
+    },
+	ifOdd : function(val, options) {
+		return val % 2 === 0
+			? options.fn(this)
+			: options.inverse(this);
+	}
 };
 
 module.exports = handlebarsHelpers;

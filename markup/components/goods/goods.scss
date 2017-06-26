@@ -1,0 +1,29 @@
+.block-goods {
+  $padding: 19%;
+  article {
+	&:nth-child(odd) {
+	  .goods-description {
+		padding-left:  $padding;
+		padding-right: 10%;
+		}
+	  }
+	&:nth-child(even) {
+	  .goods-description {
+		padding-left:  10%;
+		padding-right: $padding;
+		}
+	  }
+	}
+  }
+
+.goods-description {
+  padding-top: 4.5%;
+  .price {
+	font-size: 0.9em;
+	span {
+	  font-size:   1.6em;
+	  font-weight: 600;
+	  }
+	}
+
+  }

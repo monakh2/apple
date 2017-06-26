@@ -7,36 +7,39 @@
 	button {
 	  background-color: color(main);
 	  @include scut-size(70px);
-	  text-align: center;
+	  text-align:       center;
 
 	  span {
 		display: inline-block;
 
 		}
-	  .icon-search{
-
-		@include bg($icon-search);
+	  .icon-search {
+		//@include bg($icon-search);
+		@include bg-svg($search);
 		}
-	  .icon-basket{
+	  .icon-basket {
+		//@include bg($icon-basket);
+		@include bg-svg($basket);
 
-		@include bg($icon-basket);
 		}
 	  .icon-login {
-
-		@include bg($icon-login);
+		//@include bg($icon-login);
+		@include bg-svg($login);
 		}
-	    &.btn-login {
-		  float: right;
-		  }
+	  &.btn-login {
+		float: right;
+		}
 	  }
 
 	}
   }
 
-.row {
-  display: flex;
-  > div {
-	align-self: center;
+.page-header {
+  .row {
+	display: flex;
+	> div {
+	  align-self: center;
+	  }
 	}
   }
 
@@ -64,6 +67,7 @@
 	  }
 	}
   }
+
 #header {
   .btn-group {
 	.btn {

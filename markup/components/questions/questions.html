@@ -1,0 +1,32 @@
+<aside id="questions" class="block-questions">
+	<div class="container">
+		<div class="row">
+			{{#repeat 2}}
+			<div class="col-md-3">
+				<h3>{{questions.nav.title}}</h3>
+				<ul class="list-unstyled">
+					{{#each questions.nav.links}}
+					<li><a href="/"><span class="glyphicon glyphicon-arrow-right"></span>{{this}}</a></li>
+					{{/each}}
+				</ul>
+
+			</div>
+			{{/repeat}}
+			<div class="col-md-3 footer-contacts">
+				<h3>{{questions.contacts.title}}</h3>
+				<p class="icon-marck-blue">{{questions.contacts.address}}</p>
+				<p class="icon-mail-blue">{{questions.contacts.mail}}</p>
+				<ul class="icon-mobile-blue list-unstyled">
+					<li class="phone-number"><b>+12 (035)</b> 458061</li>
+					<li class="phone-number"><b>+12 (035)</b> 458062</li>
+					<li class="phone-number"><b>+12 (035)</b> 455973</li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer-questions">
+				<h3>{{questions.phoneCall.title}}</h3>
+				<p>{{questions.phoneCall.text}}</p>
+				<a href="/" class="btn btn-info phone-call">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+</aside>

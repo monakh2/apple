@@ -1,0 +1,30 @@
+.block-tablet {
+  @extend %bg-image;
+  background-image: url(%=static=%assets/tablet/bg-tablet.png);
+  height:           scut-em(710);
+  .container {
+	height: inherit;
+	.row {
+	  height: inherit;
+	  .wrap-text {
+		height:   inherit;
+		position: relative;
+
+		}
+	  }
+	}
+  }
+
+.tablet-in-hand {
+  background-image: url(%=static=%assets/tablet/tablet-in-hand.png);
+  bottom:           0;
+  position:         absolute;
+  @include scut-size(scut-em(680) scut-em(410));
+  }
+
+#tablet-carousel {
+  background-color: white;
+  bottom:           -192px;
+  left:             187px;
+  width:            scut-em(370);
+  }
