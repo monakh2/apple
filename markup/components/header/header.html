@@ -1,31 +1,39 @@
-<header id="header" class="page-header">
+<header id="header" class="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2 logo-block">
-				<img src="%=static=%img/assets/header/logo.png" class="center-block" alt="Image">
+			<div class="block-logo col-xs-3 col-sm-3 col-md-2 border-right">
+				<img src="%=static=%img/assets/header/logo.png" class="img-responsive" alt="logo">
 			</div>
-			<div class="col-md-2 phone-block">
-				<ul class="list-unstyled header-phones">
-					<li class="text-right"><b>+12 (035)</b> 458 06 11</li>
-					<li class="text-right"><b>+12 (035)</b> 458 06 21</li>
-				</ul>
-			</div>
-			<div class="col-md-4 search-block">
-				<form action="/" method="get" class="navbar-form hidden-sm hidden-md" role="search">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Найти">
-						<span class="input-group-btn">
-        					<button class="btn btn-info" type="button"><span class="fa fa-search"></span></button>
-      					</span>
+			<div class="col-xs-4 col-sm-5 col-md-8">
+				<div class="row">
+					<div class="block-phone col-sm-7 col-md-3 border-right">
+						<ul class="phone-list list-unstyled">
+							<li><b>+12 (035)</b> 458 06 11</li>
+							<li><b>+12 (035)</b> 458 06 21</li>
+						</ul>
 					</div>
-				</form>
+					<div class="block-search hidden-xs hidden-sm col-md-6 border-right border-right">
+						<form class="search-form" method="get" role="search">
+							<div class="input-group">
+								<input type="text" name="query" class="form-control" placeholder="Найти...">
+								<span class="input-group-btn">
+      								<button type="submit" class="btn btn-info">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+					<div class="block-price col-sm-5 col-md-3 text-center border-right">
+						<button id="downloadPrice" type="button" class="btn btn-info">
+							<span class="animated infinite flash"><i class="glyphicon glyphicon-download-alt"></i> Прайс-лист</span>
+						</button>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-2 text-center">
-				<button type="button" class="btn btn-info">Скачать прайс-лист</button>
-			</div>
-			<div class="col-md-2">
+			<div class="block-switch col-xs-5 col-sm-4 col-md-2">
 				<div class="btn-group">
-					<button type="button" class="btn btn-default hidden-lg btn-search"><span class="icon-search"></span></button>
+					<button type="button" class="btn btn-default hidden-md hidden-lg btn-search"><span class="icon-search"></span></button>
 					<button type="button" class="btn btn-default btn-basket"><span class="icon-basket"></span></button>
 					<button type="button" class="btn btn-default btn-login"><span class="icon-login"></span></button>
 				</div>

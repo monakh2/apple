@@ -1,32 +1,156 @@
 .block-questions {
-  .glyphicon-arrow-right {
-	margin-right: scut-em(5);
+  .panel-group {
+	margin-bottom: 0;
 	}
-  .footer-contacts {
+  .panel-group > div {
+	border-left:   none;
+	border-radius: 0;
+	border-right:  none;
+	color:         color(text);
+	&.panel {
+	  margin: 0;
+	  }
+	&:not(:last-child) {
+	  border-bottom: none;
+	  .panel-body {
+		text-align: center;
+		.list-unstyled {
+		  color:      color(main);
+		  text-align: left;
+		  @include max-screen(breakpoints(phone-wide)) {
+			color:   color(text);
+			display: inline-block;
+			}
+		  li {
+			a {
+			  color:       inherit;
+			  display:     block;
+			  line-height: 2em;
+			  @include max-screen(breakpoints(phone-wide)) {
+				padding: 0 $spacer;
+				}
+			  &:hover {
+				background-color: color(text);
+				border-radius:    4px;
+				color:            color(main);
+				transition:       color 0.5s;
+				}
+			  .glyphicon {
+				margin-right: $spacer;
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+
+  .panel-body {
+	p {
+	  color:      color(main);
+	  text-align: left;
+	  @include max-screen(breakpoints(phone-wide)) {
+		color:      color(text);
+		text-align: center;
+		}
+	  }
+	}
+
+  .panel-heading {
+	border-radius: 0;
+	position:      relative;
+	@include max-screen(breakpoints(phone-wide)) {
+	  .accordion-toggle:after {
+		/* symbol for "opening" panels */
+		color:       color(main); /* adjust as needed */
+		content:     "\e114"; /* adjust as needed, taken from bootstrap.css */
+		font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+		position:    absolute;
+		right:       15px;
+		top:         11px;
+		}
+	  }
+	@include min-screen(breakpoints(phone-wide)) {
+	  padding-bottom: 0;
+
+	  .accordion-toggle {
+		cursor: default;
+		&:hover {
+		  color:           color(main);
+		  text-decoration: none;
+		  }
+		}
+	  .panel-title {
+		padding-bottom: 10px;
+		border-bottom: 1px solid color(hr);
+		//position: relative;
+		span {
+		  position: relative;
+		  &::after{
+			@include pseudo();
+			@include scut-size(100% 3px);
+			background-color: color(main);
+			bottom: -11px;
+			}
+		  }
+
+		}
+	  }
+	}
+
+  @include max-screen(breakpoints(phone-wide)) {
+	.panel-heading .accordion-toggle.collapsed:after {
+	  /* symbol for "collapsed" panels */
+	  content: "\e080"; /* adjust as needed, taken from bootstrap.css */
+	  }
+
+	.panel-heading {
+	  .panel-title {
+		color:      color(main);
+		text-align: center;
+
+		}
+	  }
+	.panel-body {
+	  background-color: color(main);
+	  }
+	}
+  .icon-marck-blue,
+  .icon-mail-blue,
+  .icon-mobile-blue {
+	padding-left: $spacer * 2;
+	position:     relative;
+
+	&:before {
+	  @include pseudo();
+	  left: 0;
+	  }
+	}
+  .icon-marck-blue::before {
+	@include bg-svg($marck-blue);
+	}
+  .icon-mail-blue::before {
+	@include bg-svg($mail-blue);
+	}
+  .icon-mobile-blue::before {
+	@include bg-svg($mobile-blue);
+	}
+  @include max-screen(breakpoints(phone-wide)) {
 	.icon-marck-blue,
 	.icon-mail-blue,
 	.icon-mobile-blue {
-	  margin-left: $spacer * 2;
-	  margin-bottom: $spacer;
-	  }
-	.icon-marck-blue::before {
-	  @include pseudo();
-	  @include bg-svg($marck-blue);
-	  left: $spacer;
-	  }
-	.icon-mail-blue::before {
-	  @include pseudo();
-	  @include bg-svg($mail-blue);
-	  left: $spacer;
-	  }
-	.icon-mobile-blue::before {
-	  @include pseudo();
-	  @include bg-svg($mobile-blue);
-	  left: $spacer;
+	  display: inline-block;
 	  }
 
-	}
-  .phone-call {
-	margin-bottom: $spacer;
+	.icon-marck-blue::before {
+	  @include bg-svg($marck);
+	  }
+	.icon-mail-blue::before {
+	  @include bg-svg($mail);
+	  }
+	.icon-mobile-blue::before {
+	  @include bg-svg($mobile);
+	  }
+
 	}
   }

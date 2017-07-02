@@ -29,6 +29,7 @@
   }
 
 // You can add your own mixins here:
+
 //Intermediate function for obtaining the value of map
 @function config($map, $key) {
   @if map_has_key($map, $key) {

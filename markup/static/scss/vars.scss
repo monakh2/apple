@@ -11,8 +11,14 @@ $_breakpoints: (
 					   "tablet": 768px,
 					   "tablet-wide": 1024px,
 					   "desktop": 1248px,
-					   "desktop-wide": 1440px
+					   "desktop-wide": 1440px,
+						//Bootstrap 3.3.7 breakpoints
+					   "xs": 480px, //<480px
+					   "sm": 768px, //>=480px && <768px
+					   "md": 992px, //>=768px && <992px
+					   "lg": 1200px, //>992px && <1200px
 			   );
+
 $_color: (
 				 "main": #148EB5,
 				 "main-darck": #1D6998,

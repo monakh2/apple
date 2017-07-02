@@ -5,104 +5,173 @@
   margin-bottom:    0;
   padding:          6px 0;
 
-  .main-menu {
-	width: 100%;
-	li.dropdown {
-	  $w: 100%;
-	  width: $w / 6;
-	  &:not(:last-child){
-		border-right: 1px solid color(main-darck-hover);
+  .dropdown {
+	.dropdown-toggle {
+	  color: color(text);
+	  p {
+		margin: 0;
 		}
-	  
-	  a.dropdown-toggle {
-		color:    white;
-		height:   100px;
-		position: relative;
-
-
-		p {
-		  bottom:   0;
-		  position: absolute;
-		  width:    calc(100% - 30px);
-
-		  }
-		}
-	  &:hover {
-		p {
-		  color: color(text-hover);
-		  }
-		.icon-menu-iphone {
-		  //@include bg($iphone-hover);
-		  @include bg-svg($iphoneh);
-		  }
-		.icon-menu-ipad {
-		  //@include bg($ipad-hover);
-		  @include bg-svg($ipadh);
-		  }
-		.icon-menu-macbook {
-		  //@include bg($macboock-hover);
-		  @include bg-svg($macboockh);
-		  }
-		.icon-menu-watch {
-		  //@include bg($watch-hover);
-		  @include bg-svg($watchh);
-		  }
-		.icon-menu-desktop {
-		  //@include bg($desktop-hover);
-		  @include bg-svg($desktoph);
-		  }
-		.icon-menu-keyboard {
-		  @include bg-svg($keyboardh);
-		  }
-		}
-	  &.dropdown.open {
-		a.dropdown-toggle {
-		  background-color: color(main-darck-hover);
+	  }
+	@include max-screen(breakpoints(tablet)) {
+	  &.open {
+		.dropdown-menu-item {
+		  text-align: center;
+		  a {
+			color:   color(text) !important;
+			display: inline-block;
+			&:hover {
+			  background-color: color(text) !important;
+			  color:            color(main-darck-hover) !important;
+			  }
+			}
 		  }
 		}
 	  }
 	}
-  }
 
-.icon-menu-iphone {
-  //@include bg($iphone);
-  @include bg-svg($iphone);
-  }
+  @include min-screen(breakpoints(tablet)) {
+	.main-menu {
+	  width: 100%;
+	  li.dropdown {
+		$w: 100%;
+		width: $w / 6;
+		&:not(:last-child) {
+		  border-right: 1px solid color(main-darck-hover);
+		  }
+		a.dropdown-toggle {
+		  height:   100px;
+		  position: relative;
+		  p {
+			bottom:   0;
+			position: absolute;
+			width:    calc(100% - 30px);
+			}
+		  }
+		&:hover {
+		  p {
+			color: color(text-hover);
+			}
+		  .icon-menu-iphone {
+			@include bg-svg($iphoneh);
+			}
+		  .icon-menu-ipad {
+			@include bg-svg($ipadh);
+			}
+		  .icon-menu-macbook {
+			@include bg-svg($macboockh);
+			}
+		  .icon-menu-watch {
+			@include bg-svg($watchh);
+			}
+		  .icon-menu-desktop {
+			@include bg-svg($desktoph);
+			}
+		  .icon-menu-keyboard {
+			@include bg-svg($keyboardh);
+			}
+		  }
+		&.dropdown.open {
+		  a.dropdown-toggle {
+			background-color: color(main-darck-hover);
+			}
+		  }
+		}
+	  }
+	.icon-menu-iphone {
+	  @include bg-svg($iphone);
+	  }
 
-.icon-menu-ipad {
-  //@include bg($ipad);
-  @include bg-svg($ipad);
-  }
+	.icon-menu-ipad {
+	  @include bg-svg($ipad);
+	  }
 
-.icon-menu-macbook {
-  //@include bg($macboock);
-  @include bg-svg($macboock);
-  }
+	.icon-menu-macbook {
+	  @include bg-svg($macboock);
+	  }
 
-.icon-menu-watch {
-  //@include bg($watch);
-  @include bg-svg($watch);
-  }
+	.icon-menu-watch {
+	  @include bg-svg($watch);
+	  }
 
-.icon-menu-desktop {
-  //@include bg($desktop);
-  @include bg-svg($desktop);
-  }
+	.icon-menu-desktop {
+	  @include bg-svg($desktop);
+	  }
 
-.icon-menu-keyboard {
-  //@include bg($keyboard);
-  @include bg-svg($keyboard);
+	.icon-menu-keyboard {
+	  @include bg-svg($keyboard);
+	  }
+	}
   }
 
 .dropdown-menu {
   background-color: color(main-darck);
-  border-radius: 0;
+  border-radius:    0;
   .dropdown-menu-item {
 	a {
 	  color: white;
 	  &:hover {
 		background-color: color(main-darck-hover);
 		color:            color(text-hover);
+		}
+	  }
+	}
+  }
+
+@include max-screen(breakpoints(tablet)) {
+  .navbar.navbar-default {
+	padding: 0;
+	}
+  .main-menu.panel-group {
+	margin-bottom: 0;
+	width: 100%;
+	.panel {
+	  border-radius: 0;
+	  margin:        0 -15px;
+	  p {
+		margin: 0;
+		}
+	  .panel-heading {
+
+		}
+	  }
+	}
+  }
+
+//TODO: Подумать как вынести стрелки для аккардиона в common.scss
+@include max-screen(breakpoints(tablet)) {
+  .navbar {
+	.accordion-toggle {
+	  position: relative;
+	  display: block;
+	  &:after{
+		/* symbol for "opening" panels */
+		//color:       color(main); /* adjust as needed */
+		content:     "\e114"; /* adjust as needed, taken from bootstrap.css */
+		font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+		position:    absolute;
+		right: 5px;
+		top: 1px;
+		}
+	  }
+	.accordion-toggle.collapsed:after {
+	  /* symbol for "collapsed" panels */
+	  content: "\e080"; /* adjust as needed, taken from bootstrap.css */
+	  }
+	.panel-heading {
+	  background-color: color(main-darck);
+	  border-radius: 0;
+	  color: color(text);
+	  .accordion-toggle {
+		color: inherit;
+		}
+	  }
+	.panel-collapse {
+	  background-color: color(main-darck-hover);
+	  .dropdown-menu-item {
+		text-align: center;
+		a {
+		  color: color(text);
+		  }
 		}
 	  }
 	}

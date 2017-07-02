@@ -1,12 +1,11 @@
 <!--TODO: Подумать как сделать разметку болле семантичной-->
-<section id="goods" class="block-goods container-fluid">
+<section id="goods" class="block-goods container">
 	<h2 class="goods-title text-center text-uppercase">Предложения дня</h2>
 	<article class="row">
-		<div class="goods-img col-md-6">
-			<img class="goods-img pull-right" src="%=static=%img/assets/goods/{{goods.a.img}}" alt="Sony VAIO SVF14N190X6/B" width="600">
+		<div class="goods-img col-xs-12 col-md-6">
+			<img src="%=static=%img/assets/goods/{{goods.a.img}}" class="img-responsive center-block" alt="Sony VAIO SVF14N190X6/B" width="600">
 		</div>
-		<div class="goods-description col-md-6">
-			<!--<h3>Sony VAIO SVF14N190X6/B</h3>-->
+		<div class="goods-description col-xs-12 col-md-6">
 			<h3>{{goods.a.title}}</h3>
 			<p>Экран: 14, (1920x1080) / Процессор: Intel Core i7-4500U, 2 ядра, (1,8 ГГц) / Графический адаптер: Intel HD Graphics 4400 / ОЗУ: 8
 			   Гб / Встроенная память: 512 Гб / ОС: Windows 8 / Размер: 338x235,7x22,1 мм / Вес: 2,2 кг</p>
@@ -15,15 +14,15 @@
 		</div>
 	</article>
 	<article class="row">
-		<div class="goods-description col-md-6">
+		<div class="goods-img col-xs-12 col-md-6 col-md-push-6">
+			<img src="%=static=%img/assets/goods/{{goods.a.img}}" class="img-responsive center-block" alt="Sony VAIO SVF14N190X6/B" width="600">
+		</div>
+		<div class="goods-description col-xs-12 col-md-6 col-md-pull-6">
 			<h3>Sony VAIO SVF14N190X6/B</h3>
 			<p>Экран: 14, (1920x1080) / Процессор: Intel Core i7-4500U, 2 ядра, (1,8 ГГц) / Графический адаптер: Intel HD Graphics 4400 / ОЗУ: 8
 			   Гб / Встроенная память: 512 Гб / ОС: Windows 8 / Размер: 338x235,7x22,1 мм / Вес: 2,2 кг</p>
 			<p class="price">от <span>81 990</span> руб.</p>
 			<a href="/" class="btn btn-info read-more">Подробнее</a>
-		</div>
-		<div class="goods-img col-md-6">
-			<img class="pull-left" src="%=static=%img/assets/goods/laptop.png" alt="Sony VAIO SVF14N190X6/B" width="600">
 		</div>
 	</article>
 </section>

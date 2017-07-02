@@ -1,47 +1,37 @@
 .advantages {
   background-color: color(bg);
 
+  .icon-advantages {
+	@include scut-center-transform;
+	top: 35%;
+	}
   .icon-loupe {
-	@include bg-svg($loupe);
+	@include bg-svg($loupe-large);
 	}
   .icon-medal {
-	@include bg-svg($medal);
+	@include bg-svg($medal-large);
 
 	}
   .icon-airplan {
-	@include bg-svg($airplan);
+	@include bg-svg($airplan-large);
 	}
   .icon-spanner {
-	@include bg-svg($spanner);
-	}
-  @include min-screen(breakpoints(desktop)) {
-	.icon-advantages {
-	  margin-top: 65px;
-	  }
-	.icon-loupe {
-	  @include bg-svg($loupe-large);
-	  }
-	.icon-medal {
-	  @include bg-svg($medal-large);
-	  }
-	.icon-airplan {
-	  @include bg-svg($airplan-large);
-	  }
-	.icon-spanner {
-	  @include bg-svg($spanner-large);
-	  }
+	@include bg-svg($spanner-large);
 	}
   }
 
 .advantages-item {
-  height:   scut-em(320);
+  height:   scut-em(250);
   position: relative;
+  @include max-screen(breakpoints(phone)) {
+	width: 100%;
+	}
 
   .advantages-title {
+	bottom:    $spacer;
 	color:     color(text-darck);
 	font-size: 22px;
 	position:  absolute;
-	width:    calc(100% - 30px);
-	bottom: $spacer;
+	width:     calc(100% - 30px);
 	}
   }

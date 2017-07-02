@@ -1,9 +1,7 @@
 // Common styles of the project
-
 html, body {
     height: 100%;
 }
-
 .page {
     
 }
@@ -20,3 +18,11 @@ html, body {
 .page__buffer {
     height: 50px;
 }
+
+.bt {
+    border-radius: 4px;
+    border: 1px solid #70A7FF;
+    }
+.flex-box {
+    display: flex;
+    }

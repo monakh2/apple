@@ -1,77 +1,135 @@
-.page-header {
+.header {
+  $block-height: 90px;
+  $block-padding: 10px;
+  $border: 1px solid color(hr);
+
   background-color: color(bg);
-  margin:           0;
-  padding:          0;
-  .btn-group {
-	width: 100%;
+  border-bottom:    1px solid color(hr);
+  min-height:           $block-height;
+  padding:          $block-padding 0;
+
+
+  .block-price {
 	button {
-	  background-color: color(main);
-	  @include scut-size(70px);
-	  text-align:       center;
+	  background: transparent;
+	  border:     1px solid color(main);
+	  padding:    3px;
 
 	  span {
-		display: inline-block;
-
-		}
-	  .icon-search {
-		//@include bg($icon-search);
-		@include bg-svg($search);
-		}
-	  .icon-basket {
-		//@include bg($icon-basket);
-		@include bg-svg($basket);
-
-		}
-	  .icon-login {
-		//@include bg($icon-login);
-		@include bg-svg($login);
-		}
-	  &.btn-login {
-		float: right;
+		animation-duration: 4s;
+		background-color:   color(main);
+		border-radius:      4px;
+		display:            block;
+		//TODO: Посмотреть как собираются файлы animation.css (node_modules) все?/только используемые в проэкте?
+		padding:            6px 10px;
+		.glyphicon.glyphicon-download-alt {
+		  margin-right: 5px;
+		  @include screen(breakpoints(sm), 900px) {
+			display:       block;
+			margin-bottom: 5px;
+			}
+		  }
 		}
 	  }
-
 	}
-  }
+  .block-phone {
+	.phone-list {
+	  color:        color(main);
+	  padding-left: $spacer +5px;
+	  position:     relative;
+	  @include screen(breakpoints(md), 1100px) {
+		font-size: 0.85em;
+		}
 
-.page-header {
-  .row {
-	display: flex;
-	> div {
-	  align-self: center;
+	  &::before {
+		@include pseudo();
+		@include bg-svg($mobile-blue);
+		left: 0;
+		}
 	  }
 	}
-  }
 
-.header-phones {
-  color:  color(main);
-  margin: 0;
-  li:first-child {
-	position: relative;
-	&:before {
-	  @include pseudo();
-	  //@include scut-size(11px 18px);
-	  @include bg($icon-modile);
+
+  @include min-screen(breakpoints(sm)) {
+	.block-logo,
+	.block-phone,
+	.block-search,
+	.block-switch {
+	  min-height: $block-height - $block-padding * 2;
+	  @include scut-vcenter-td(".phone-list, .search-form");
+	  }
+	.block-price {
+	  line-height: 70px;
+	  }
+	.block-logo > img {
+	  max-height: 70px;
 	  }
 	}
-  }
-
-.search-block {
-  padding-right: 0;
-  .input-group {
-	width: 100%;
-	}
-  .input-group-btn {
-	.btn {
-	  padding-bottom: 7px;
+  .block-search {
+	button {
+	  background-color: color(main);
+	  height:           34px;
 	  }
 	}
-  }
 
-#header {
+
+  .border-right {
+	//border-right: 1px solid color(hr);
+	border-right: $border;
+	}
+  @include screen(breakpoints(phone-wide), breakpoints(sm)) {
+	.block-logo,
+	.block-phone,
+	.block-price {
+	  border-right: none;
+	  }
+	.block-logo + div {
+	  border-right: $border;
+	  border-left: $border;
+	  }
+	}
   .btn-group {
-	.btn {
-	  border-radius: 5px;
+	width: 100%;
+	.btn-search,
+	.btn-basket,
+	.btn-login {
+	  background-color: color(main);
+	  @include scut-size(scut-em(70));
+	  border-radius:    4px !important;
+	  @include screen(breakpoints(md), 1030px) {
+		@include scut-size(scut-em(65));
+		}
 	  }
+	@include min-screen(breakpoints(md)) {
+	  .btn-login {
+		float: right !important;
+		}
+	  }
+	@include screen(breakpoints(phone), breakpoints(md)) { 
+	  display: flex;
+	  .btn {
+		margin: auto;
+		}
+	  }
+	@include screen(530px, 610px) {
+	  .btn.btn-default {
+		@include scut-size(60px);
+		}
+	  }
+	}
+
+  .icon-search {
+	display: inline-block;
+	@include bg-svg($search);
+	}
+
+  .icon-basket {
+	display: inline-block;
+	@include bg-svg($basket);
+	}
+
+  .icon-login {
+	display: inline-block;
+	@include bg-svg($login);
 	}
   }
