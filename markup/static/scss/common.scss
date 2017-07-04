@@ -2,6 +2,17 @@
 html, body {
     height: 100%;
 }
+body {
+    min-width:480px; /* suppose you want minimun width of 480px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:480px;             /* As IE ignores !important it will set width as 480px; */
+    }
+//or
+//body{
+//    min-width:480px; // suppose you want minimun width of 480px
+//    _width: expression( document.body.clientWidth > 480 ? "480px" : "auto" ); /* sets max-width for IE */
+//    }
+
 .page {
     
 }

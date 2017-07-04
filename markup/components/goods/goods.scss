@@ -1,16 +1,24 @@
 .block-goods {
+
+  @include max-screen(breakpoints(lg)) {
+	margin-bottom: 20px;
+	}
+  
   $padding: 19%;
+
   article {
-	&:nth-child(odd) {
-	  .goods-description {
-		padding-left:  $padding;
-		padding-right: 10%;
+	@include min-screen(breakpoints(md)) {
+	  &:nth-child(odd) {
+		.goods-description {
+		  padding-left:  $padding;
+		  padding-right: 10%;
+		  }
 		}
-	  }
-	&:nth-child(even) {
-	  .goods-description {
-		padding-left:  10%;
-		padding-right: $padding;
+	  &:nth-child(even) {
+		.goods-description {
+		  padding-left:  10%;
+		  padding-right: $padding;
+		  }
 		}
 	  }
 	}

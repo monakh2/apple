@@ -1,7 +1,18 @@
 .block-tablet {
-  @extend %bg-image;
-  background-image: url(%=static=%assets/tablet/bg-tablet.png);
-  height:           scut-em(710);
+
+  background-image:    url(%=static=%assets/tablet/bg-tablet.png);
+  background-position: left;
+  //@extend %bg-image;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  //height:              scut-em(710);
+  height:              710px;
+  width:               100%;
+  @include max-screen(700px) {
+	background-color: color(bg);
+	background-image: none;
+	}
+
   .container {
 	height: inherit;
 	.row {
@@ -9,7 +20,6 @@
 	  .wrap-text {
 		height:   inherit;
 		position: relative;
-
 		}
 	  }
 	}
@@ -20,11 +30,68 @@
   bottom:           0;
   position:         absolute;
   @include scut-size(scut-em(680) scut-em(410));
+  @include max-screen(1600px) {
+	right: 0;
+	}
+  @include max-screen(700px) {
+	background-repeat: no-repeat;
+	background-size:   contain;
+	height:            381px;
+	width:             100%;
+	}
   }
 
 #tablet-carousel {
   background-color: white;
   bottom:           -192px;
   left:             187px;
-  width:            scut-em(370);
+  width:            scut-em(375);
+  @include max-screen(1600px) {
+	left: -20px;
+	}
+  @include max-screen(breakpoints(lg)) {
+	left: -106px;
+	}
+  @include max-screen(breakpoints(md)) {
+	left: 198px;
+	top:  212px;
+	}
+  }
+
+$blockTabletHeight: 710px;
+$blockTabletStep: 36px;
+//$viewportStart: 650px;
+$viewportStart: 700px;
+$viewportStep: 25px;
+$imgStartHeight: 383px;
+$imgStep: 15px;
+@for $i from 1 through 8 {
+
+  @include max-screen($viewportStart - $viewportStep * $i) {
+	.block-tablet {
+	  height: $blockTabletHeight - $blockTabletStep * $i;
+	  }
+	}
+  @if ($i >= 3) {
+	@include max-screen($viewportStart - $viewportStep * $i) {
+
+	  .block-tablet {
+		height: $blockTabletHeight - $blockTabletStep * $i;
+		}
+	  .tablet-in-hand {
+		height: $imgStartHeight - $imgStep * $i;
+		}
+	  }
+	}
+  }
+
+@include max-screen(730px) {
+  .tablet-in-hand {
+	background-image:  url(%=static=%assets/tablet/tablet-in-hand-small.png);
+	background-repeat: no-repeat;
+	background-size:   contain;
+	}
+  #tablet-carousel {
+	display: none;
+	}
   }
