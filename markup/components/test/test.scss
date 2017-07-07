@@ -1,3 +1,16 @@
 #my-test {
-  //min-height: 300px;
+  border: 1px solid #FF244D;
+  margin: 0 auto;
+  width:  60%;
+
+  .popover-markup {
+	#test-btn-search {
+	  @include scut-size(50px);
+	  background-color: #C7254E;
+	  span {
+		display: inline-block;
+		@include bg-svg($search);
+		}
+	  }
+	}
   }
