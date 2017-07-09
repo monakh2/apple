@@ -33,9 +33,14 @@
 			</div>
 			<div class="block-switch col-xs-5 col-sm-4 col-md-2">
 				<div class="btn-group">
-					<button type="button" class="btn btn-default hidden-md hidden-lg btn-search"><span class="icon-search"></span></button>
-					<button type="button" class="btn btn-default btn-basket"><span class="icon-basket"></span></button>
-					<button type="button" class="btn btn-default btn-login"><span class="icon-login"></span></button>
+					<button id="btn-search" class="btn btn-default hidden-md hidden-lg btn-search" type="button">
+						<span class="icon-search"></span>
+					</button>
+					{{> popoverSearch/popoverSearch}}
+					<button id="btn-basket" class="btn btn-default btn-basket" type="button"><span class="icon-basket"></span></button>
+					{{> popoverBasket/popoverBasket}}
+					<button id="btn-login" class="btn btn-default btn-login" type="button"><span class="icon-login"></span></button>
+					{{> popoverLogin/popoverLogin}}
 				</div>
 			</div>
 		</div>
