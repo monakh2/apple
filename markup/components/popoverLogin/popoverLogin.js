@@ -1,1 +1,6 @@
-$('#btn-login').webuiPopover();
+$(function () {
+	$('#btn-login').webuiPopover({
+		padding: false,
+		width: 300
+	});
+});

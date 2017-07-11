@@ -1,3 +1,19 @@
-<div class="webui-popover-content">
-	<p>Content Login</p>
+<div class="webui-popover-content webui-popover-content-login">
+	<!-- TAB NAVIGATION -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li class="active"><a href="#popoverLogin-tab-1" role="tab" data-toggle="tab">Вход</a></li>
+		<li><a href="#popoverLogin-tab-2" role="tab" data-toggle="tab">Регистрация</a></li>
+	</ul>
+	<!-- TAB CONTENT -->
+	<div class="tab-content">
+		<div class="active tab-pane fade in" id="popoverLogin-tab-1">
+			{{> popoverLogin/formLogin}}
+		</div>
+		<div class="tab-pane fade" id="popoverLogin-tab-2">
+			{{> popoverLogin/formRegistration}}
+		</div>
+	</div>
+
 </div>
+
+

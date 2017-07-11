@@ -1,1 +1,5 @@
-var data = {popoverLogin: {}};
+var data = {
+	popoverLogin: {
+		LoginBtn: 'Войти'
+	}
+};

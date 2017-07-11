@@ -1,6 +1,6 @@
 $('#btn-basket').webuiPopover({
 	padding: false,
-	width: 270
+	width: 300
 });
 
 $(".btn-close").click(function () {

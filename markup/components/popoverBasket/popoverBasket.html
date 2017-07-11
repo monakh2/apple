@@ -15,13 +15,13 @@
 						</div>
 						<div class="col-xs-7">
 							<p class="basket-item-title">{{popoverBasket.item.title}}</p>
-							<p class="basket-item-price">{{popoverBasket.item.price}}</p>
-							<span class="btn-close">&times;</span>
+							<!--<p class="basket-item-price"><span>{{popoverBasket.item.price}} <i class="icon-uah"></i></span></p>-->
+							<p class="basket-item-price"><span>{{popoverBasket.item.price}} руб</span></p>
 						</div>
 					</div>
+					<span class="btn-close">&times;</span>
 				</div>
 				{{/repeat}}
-
 				<button type="button" class="btn btn-default">{{popoverBasket.basketBtn}}</button>
 			</div>
 		</div>

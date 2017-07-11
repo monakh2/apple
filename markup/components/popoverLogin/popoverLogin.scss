@@ -1,1 +1,71 @@
+.webui-popover-content-login {
+	.wrap-form {
+		margin:  0;
+		padding: 0;
+		}
+	#login-form,
+	#register-form {
+		.form-group {
+			margin: 0 15px 15px;
+			}
+		}
+	.nav-tabs {
+		> li {
+			width: 50%;
+			text-align: center;
+			background-color: #d9edf7;
+			a {
+				font-weight: 600;
+				}
+			}
+		}
+	.tab-content {
+		margin-top: $spacer;
+		}
+	.btn-login {
+		background-color: #59B2E0;
+		border-color:     #59B2E6;
+		color:            #FFFFFF;
+		font-weight:      normal;
+		height:           auto;
+		outline:          none;
+		//padding:          14px 0;
+		text-transform:   uppercase;
+		}
 
+	.btn-login:hover,
+	.btn-login:focus {
+		background-color: #53A3CD;
+		border-color:     #53A3CD;
+		color:            #FFFFFF;
+		}
+
+	.forgot-password {
+		color:           #888888;
+		text-decoration: underline;
+		}
+
+	.forgot-password:hover,
+	.forgot-password:focus {
+		color:           #666666;
+		text-decoration: underline;
+		}
+
+	.btn-register {
+		background-color: #1CB94E;
+		border-color:     #1CB94A;
+		color:            #FFFFFF;
+		font-weight:      normal;
+		height:           auto;
+		outline:          none;
+		//padding:          14px 0;
+		text-transform:   uppercase;
+		}
+
+	.btn-register:hover,
+	.btn-register:focus {
+		background-color: #1CA347;
+		border-color:     #1CA347;
+		color:            #FFFFFF;
+		}
+	}
