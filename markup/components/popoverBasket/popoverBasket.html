@@ -1,11 +1,29 @@
-	<div class="panel panel-info webui-popover-content webui-popover-content-basket">
-		<div class="panel-heading">
-			<h3 class="panel-title">Товары в корзине</h3>
-		</div>
-		<div class="panel-body">
-			<div class="alert alert-info">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				<strong>Title!</strong> Alert body ...
+<div class="panel panel-info webui-popover-content webui-popover-content-basket">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{popoverBasket.basketTitle}}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="container-fluid">
+			<div class="row">
+				{{#repeat 3}}
+				<div id="basket-item-{{@index}}" class="item-basket col-xs-12">
+					<div class="row">
+						<div class="col-xs-5">
+							<div class="basket-item-img-wrap">
+								<img class="basket-item-img" src="%=static=%img/assets/popoverBasket/{{popoverBasket.item.img}}" alt="{{popoverBasket.item.title}}">
+							</div>
+						</div>
+						<div class="col-xs-7">
+							<p class="basket-item-title">{{popoverBasket.item.title}}</p>
+							<p class="basket-item-price">{{popoverBasket.item.price}}</p>
+							<span class="btn-close">&times;</span>
+						</div>
+					</div>
+				</div>
+				{{/repeat}}
+
+				<button type="button" class="btn btn-default">{{popoverBasket.basketBtn}}</button>
 			</div>
 		</div>
 	</div>
+</div>

@@ -1,5 +1,63 @@
 .webui-popover .webui-popover-content > div:first-child {
-  border:     none;
-  box-shadow: none;
-  width:      100%;
-  }
+	border:     none;
+	box-shadow: none;
+	width:      100%;
+	}
+
+.panel.panel-info {
+	margin-bottom: 0;
+	.basket-item-price {
+		background-color: color(main);
+		border-radius:    4px;
+		color:            color(text);
+		padding:          10px $spacer;
+		}
+	.btn {
+		background-color:        color(main);
+		border:                  none;
+		border-top-left-radius:  0;
+		border-top-right-radius: 0;
+		color:                   color(text);
+		width:                   100%;
+
+		}
+	}
+
+.panel-body {
+	padding: 0;
+	}
+
+.item-basket {
+	padding: 10px 15px;
+	position: relative;
+	@include scut-clearfix;
+	&:not(:last-child) {
+		border-top: 1px solid #DFDEDE;
+		}
+	&:last-child {
+		@include scut-border(1px solid #DFDEDE, y n);
+		}
+	.btn-close {
+		color:       color(main);
+		cursor:      pointer;
+		font-size:   23px;
+		font-weight: 900;
+		position:    absolute;
+		right: 10px;
+		top: -10px;
+		&:hover {
+			color: #CCCCCC;
+			}
+		}
+
+	}
+
+.basket-item-img-wrap {
+	@include scut-circle(scut-em(90), color(text));
+	border:    1px solid #DFDEDE;
+	float:    left;
+	position:  relative;
+	img {
+		@include scut-center-transform;
+		}
+	}
