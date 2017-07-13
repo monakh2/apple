@@ -28,7 +28,11 @@
 		border-top-right-radius: 0;
 		color:                   color(text);
 		width:                   100%;
-
+		&:hover,
+		&:active {
+			background-color: color(main-darck-hover);
+			border-color:     color(main-darck-hover);
+			}
 		}
 	}
 

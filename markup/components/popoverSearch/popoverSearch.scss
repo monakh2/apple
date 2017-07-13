@@ -1,1 +1,7 @@
-
+@include max-screen(breakpoints(md)) {
+	#search-form {
+		 .form-group {
+			 margin: $spacer;
+			 }
+		}
+	}

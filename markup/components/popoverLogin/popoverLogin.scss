@@ -1,4 +1,6 @@
+
 .webui-popover-content-login {
+	overflow: hidden;
 	.wrap-form {
 		margin:  0;
 		padding: 0;
@@ -7,6 +9,10 @@
 	#register-form {
 		.form-group {
 			margin: 0 15px 15px;
+			}
+		input[type="submit"] {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
 			}
 		}
 	.nav-tabs {
@@ -17,15 +23,30 @@
 			a {
 				font-weight: 600;
 				}
+			&:first-child.active {
+				a {
+					border-top-color: white;
+					border-left-color: white;
+					border-top-right-radius: 0;
+					}
+				}
+			&:last-child.active {
+				a {
+					border-top-color: white;
+					border-top-left-radius: 0;
+					margin-right: -1px;
+					margin-left: -3px;
+					}
+				}
 			}
 		}
 	.tab-content {
 		margin-top: $spacer;
 		}
 	.btn-login {
-		background-color: #59B2E0;
-		border-color:     #59B2E6;
-		color:            #FFFFFF;
+		background-color: color(main);
+		border-color:     color(main);
+		color:            color(text);
 		font-weight:      normal;
 		height:           auto;
 		outline:          none;
@@ -35,9 +56,8 @@
 
 	.btn-login:hover,
 	.btn-login:focus {
-		background-color: #53A3CD;
-		border-color:     #53A3CD;
-		color:            #FFFFFF;
+		background-color: color(main-darck-hover);
+		border-color:     color(main-darck-hover);
 		}
 
 	.forgot-password {
@@ -52,9 +72,9 @@
 		}
 
 	.btn-register {
-		background-color: #1CB94E;
-		border-color:     #1CB94A;
-		color:            #FFFFFF;
+		background-color: color(main);
+		border-color:     color(main);
+		color:            color(text);
 		font-weight:      normal;
 		height:           auto;
 		outline:          none;
@@ -64,8 +84,7 @@
 
 	.btn-register:hover,
 	.btn-register:focus {
-		background-color: #1CA347;
-		border-color:     #1CA347;
-		color:            #FFFFFF;
+		background-color: color(main-darck-hover);
+		border-color:     color(main-darck-hover);
 		}
 	}
