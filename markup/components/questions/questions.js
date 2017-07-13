@@ -11,9 +11,9 @@ function createBlocks() {
 if ($(window).width() >= 480) {
 	createBlocks();
 }
-// else {
-// 	createPanels();
-// }
+else {
+	createPanels();
+}
 
 
 $(window).on('resizeend', function () {
@@ -23,3 +23,34 @@ $(window).on('resizeend', function () {
 		createPanels();
 	}
 });
+
+
+// Wrap IIFE around your code
+// (function($, viewport){
+// 	$(document).ready(function() {
+//
+// 		// Executes only in XS breakpoint
+// 		if(viewport.is('xs')) {
+// 			// ...
+// 		}
+//
+// 		// Executes in SM, MD and LG breakpoints
+// 		if(viewport.is('>=sm')) {
+// 			// ...
+// 		}
+//
+// 		// Executes in XS and SM breakpoints
+// 		if(viewport.is('<md')) {
+// 			// ...
+// 		}
+//
+// 		// Execute code each time window size changes
+// 		$(window).resize(
+// 			viewport.changed(function() {
+// 				if(viewport.is('xs')) {
+// 					// ...
+// 				}
+// 			})
+// 		);
+// 	});
+// })(jQuery, ResponsiveBootstrapToolkit);
